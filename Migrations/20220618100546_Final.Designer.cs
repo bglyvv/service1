@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Service1.DAL;
 
-namespace Service1.DAL.Migrations
+namespace Service1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220610205559_InitialMig")]
-    partial class InitialMig
+    [Migration("20220618100546_Final")]
+    partial class Final
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,9 +43,6 @@ namespace Service1.DAL.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("Name")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Surname")
                         .HasColumnType("text");
 
                     b.HasKey("Id");

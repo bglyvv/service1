@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace Service1.DAL.Migrations
+namespace Service1.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Create : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

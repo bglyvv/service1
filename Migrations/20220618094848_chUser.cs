@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Service1.DAL.Migrations
+namespace Service1.Migrations
 {
-    public partial class changestring : Migration
+    public partial class chUser : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

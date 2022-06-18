@@ -5522,11 +5522,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kanan\\Desktop\\Services\\Service1\\Service1.csproj",
+      "projectUniqueName": "C:\\Users\\Kanan\\Desktop\\service1\\Service1.csproj",
       "projectName": "Service1",
-      "projectPath": "C:\\Users\\Kanan\\Desktop\\Services\\Service1\\Service1.csproj",
+      "projectPath": "C:\\Users\\Kanan\\Desktop\\service1\\Service1.csproj",
       "packagesPath": "C:\\Users\\Kanan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kanan\\Desktop\\Services\\Service1\\obj\\",
+      "outputPath": "C:\\Users\\Kanan\\Desktop\\service1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kanan\\AppData\\Roaming\\NuGet\\NuGet.Config",

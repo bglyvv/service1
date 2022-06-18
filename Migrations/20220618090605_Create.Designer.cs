@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Service1.DAL;
 
-namespace Service1.DAL.Migrations
+namespace Service1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220610212808_third")]
-    partial class third
+    [Migration("20220618090605_Create")]
+    partial class Create
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

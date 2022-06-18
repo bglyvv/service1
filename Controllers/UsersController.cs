@@ -14,7 +14,7 @@ using System.Text;
 
 namespace Service1.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("v2/api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {
@@ -41,12 +41,7 @@ namespace Service1.Controllers
             {
                 return BadRequest();
             }
-
-            string contentStream = null;
             StringBuilder skills = new StringBuilder();
-
-
-            var client = _clientFactory.CreateClient();
 
             User user = await _ctx.Users.Include(u => u.UserSkills).ThenInclude(us => us.Skill).FirstOrDefaultAsync(u => u.Id == id);
             
@@ -55,28 +50,8 @@ namespace Service1.Controllers
                 return NotFound();
             }
 
-            foreach (UserSkill userSkill in user.UserSkills){
-                skills.Append(userSkill.Skill.Name + (userSkill != user.UserSkills.Last() ? ", " : ""));
-            }
-            
-            string response = "";
 
-            try
-            {
-                var httpResponseMessage = await client.GetAsync("http://localhost:8081/api/timestamp");
-
-                contentStream = await httpResponseMessage.Content.ReadAsStringAsync();
-                Console.WriteLine(httpResponseMessage.Content);
-                response = $"User {user.Name} {user.Surname} has made a response at {contentStream}. \n\nHe/She has following skills: {skills}";
-
-            }
-            catch (System.Exception e)
-            {
-                Console.WriteLine(e);
-                response = "Second server is not running.";
-            }
-
-            return Ok(response);
+            return Ok(user);
         }
 
         [HttpPost]

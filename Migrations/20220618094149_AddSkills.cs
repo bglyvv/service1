@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Service1.DAL.Migrations
+namespace Service1.Migrations
 {
-    public partial class InitialMig : Migration
+    public partial class AddSkills : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
